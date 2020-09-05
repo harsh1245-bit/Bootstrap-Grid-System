@@ -78,7 +78,7 @@
             <img src="img/logo.png" class="img-fluid" />
           </div>
           <div class="col-12 col-sm align-self-center">
-            <a href="#reserveform" class="btn btn-warning">Reserve Table</a>
+            <a href="#reserveform" class="btn-sm btn-warning">Reserve Table</a>
           </div>
         </div>
       </div>
@@ -86,7 +86,7 @@
 
     <div class="container">
       <div class="row row-content align-items-center">
-        <div col="col-12 col-sm-4 order-sm-last col-md-3">
+        <div class="col-12 col-sm-4 order-sm-last col-md-3">
           <h3>Our Lipsmacking Culinary Creations</h3>
         </div>
         <div class="col col-sm order-sm-first col-md">
@@ -112,22 +112,32 @@
       </div>
 
       <div class="row row-content align-item-center">
-        <div col="col-12 col-sm-4 col-md-3">
-          <h3>This Month's Promotions</h3>
+        <div class="col-12 col-sm-2 col-md-3">
+          <h3 >This Month's Promotions</h3>
         </div>
         <div class="col col-sm col-md">
-          <h2>Weekend Grand Buffet</h2>
-          <p>
-            Featuring mouthwatering combinations with a choice of five different
-            salads, six enticing appetizers, six main entrees and five choicest
-            desserts. Free flowing bubbly and soft drinks. All for just $19.99
-            per person
-          </p>
+          <div class="media">
+            <div class="media-body">
+              <h2 class="mt-0">Weekend Grand Buffet <spam class="badge badge-danger">NEW</spam></h2>
+              <p>
+                Featuring mouthwatering combinations with a choice of five different
+                salads, six enticing appetizers, six main entrees and five choicest
+                desserts. Free flowing bubbly and soft drinks. All for just $19.99
+                per person
+              </p>
+            </div>
+            <img
+            class="d-flex mr-3 img-thumbnail align-self-center"
+            src="img/buffet.png"
+            alt="Buffet"
+          />
+          </div>
+
         </div>
       </div>
 
       <div class="row row-content align-item-center">
-        <div col="col-12 col-sm-4 order-sm-last col-md-3">
+        <div class="col-12 col-sm-4 order-sm-last col-md-3">
           <h3>Meet our Culinary Specialists</h3>
         </div>
         <div class="col col-sm order-sm-first col-md">
@@ -153,90 +163,24 @@
       <div class="row row-content">
         <div class="card col-12 offset-2 col-sm-8">
           <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-          <div class="card-body"></div>
-          <form id="reserveform">
-            <div class="form-group row">
-              <label for="Guests" class="col-md-2 col-form-label"
-                >Number of Guests</label
-              >
-              <div class="custom-control custom-radio">
-                <input
-                  type="radio"
-                  class="custom-control-input"
-                  id="numberofguests1"
-                  name="numberofguests"
-                />
-                <label class="custom-control-label" for="numberofguests1"
-                  >1</label
-                >
-              </div>
-              <div class="custom-control custom-radio">
-                <input
-                  type="radio"
-                  class="custom-control-input"
-                  id="numberofguests2"
-                  name="numberofguests"
-                />
-                <label class="custom-control-label" for="numberofguests2"
-                  >2</label
-                >
-              </div>
-              <div class="custom-control custom-radio">
-                <input
-                  type="radio"
-                  class="custom-control-input"
-                  id="numberofguests3"
-                  name="numberofguests"
-                />
-                <label class="custom-control-label" for="numberofguests3"
-                  >3</label
-                >
-              </div>
-              <div class="custom-control custom-radio">
-                <input
-                  type="radio"
-                  class="custom-control-input"
-                  id="numberofguests4"
-                  name="numberofguests"
-                />
-                <label class="custom-control-label" for="numberofguests4"
-                  >4</label
-                >
-              </div>
-              <div class="custom-control custom-radio">
-                <input
-                  type="radio"
-                  class="custom-control-input"
-                  id="numberofguests5"
-                  name="numberofguests"
-                />
-                <label class="custom-control-label" for="numberofguests5"
-                  >5 </label
-                >
-              </div>
-              <div class="custom-control custom-radio">
-                <input
-                  type="radio"
-                  class="custom-control-input"
-                  id="numberofguests6"
-                  name="numberofguests"
-                />
-                <label class="custom-control-label" for="numberofguest63"
-                  >6</label
-                >
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="dateandtime" class="col-md-2 col-form-label">Date and Time</label>
-              <input type="date" class="form-control col-md-3" placeholder="Date"/>
-              <input type="time"class="form-control offset-1 col-md-3" placeholder="Time"/>
-              </div>
-              <div class="offset-md-2">
-                <button type="submit" class="btn btn-primary">Reserve</button>
-              </div>
-              
-            </div>
-          </form>
+          <div class="card-body" id="reserveform">
+            <dl class="row">
+              <dt class="col-3">Number of Guests</dt>
+              <dd class="col-9">
+                <label class="radio-inline mx-2"><input type="radio" name="optradio" checked="">1</label>
+                <label class="radio-inline mx-2"><input type="radio" name="optradio">2</label>
+                <label class="radio-inline mx-2"><input type="radio" name="optradio">3</label>
+                <label class="radio-inline mx-2"><input type="radio" name="optradio">4</label>
+                <label class="radio-inline mx-2"><input type="radio" name="optradio">5</label>
+                <label class="radio-inline mx-2"><input type="radio" name="optradio">6</label>
+              </dd>
+              <dt class="col-3">Date and Time</dt>
+              <dd class="col-9 row">
+                <input type="text" class="form-control d-inline col-4 mr-5" placeholder="Date">
+                <input type="text" class="form-control d-inline col-4" placeholder="Time">
+              </dd>
+            </dl>
+            <button class="btn btn-primary offset-3">Reserve</button>
         </div>
       </div>
     </div>
