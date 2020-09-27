@@ -61,7 +61,7 @@
             </li>
           </ul>
           <span class="navbar-text">
-            <a data-toggle="modal" data-target="#loginModal">
+            <a id="loginclick">
               <span class="fa fa-sign-in"></span> Login
             </a>
           </span>
@@ -73,7 +73,7 @@
       <div class="modal-dialog modal-lg" role="content">
         <div class="modal-content">
           <div class ="modal-header">
-            <h4 class="modal-title">LOGIN</h4>
+            <h4 class="modal-title text-white">LOGIN</h4>
             <button type="button" class="close" data-dismiss="modal">
               &times;
             </button>
@@ -121,16 +121,17 @@
             <img src="img/logo.png" class="img-fluid" />
           </div>
           <div class="col-12 col-sm align-self-center">
-            <span class="navbar-text btn-warning btn-lg">
-              <a data-toggle="modal" data-target="#registerModal">
-              <span class="fa fa-sign-in"></span>   Register Table  </a>
-          </span>
+            <span class="navbar-text">
+              <button id="registerclick" class="btn-lg btn-warning">
+                <span class="fa fa-sign-in"></span> Register Table
+              </button>
+              </span>
           </div>
           <div id="registerModal" class="modal fade" role="dialog">
             <div class="modal-dialog modal-lg" role="content">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title text-dark text-capitalize">Register Table</h4>
+                  <h4 class="modal-title text-light text-capitalize">Register Table</h4>
                   <button type="button" class="close" data-dismiss="modal">
                     &times;
                   </button>
@@ -410,6 +411,16 @@
           )
         }
       )
+    </script>
+    <script>
+      $('#loginclick').click( 'show.bs.modal', function (e) {
+        $('#loginModal').modal('show');
+})
+    </script>
+    <script>
+        $('#registerclick').click( 'show.bs.modal', function (e) {
+        $('#registerModal').modal('show');
+        })
     </script>
   </body>
 </html>
